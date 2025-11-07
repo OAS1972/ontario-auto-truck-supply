@@ -1,0 +1,50 @@
+[
+  {
+    "year": 2022,
+    "make": "Ram",
+    "model": "1500",
+    "parts": {
+      "Wiper Blades": "WB-2245",
+      "Oil Filter": "OF-5151",
+      "Engine Air Filter": "AF-9213",
+      "Cabin Air Filter": "CF-8820",
+      "Fuel Filter": "FF-1776"
+    }
+  },
+  {
+    "year": 2023,
+    "make": "Jeep",
+    "model": "Wrangler",
+    "parts": {
+      "Wiper Blades": "WB-2047",
+      "Oil Filter": "OF-3410",
+      "Engine Air Filter": "AF-9334",
+      "Cabin Air Filter": "CF-7719",
+      "Fuel Filter": "FF-1682"
+    }
+  },
+  {
+    "year": 2021,
+    "make": "Chevrolet",
+    "model": "Silverado 1500",
+    "parts": {
+      "Wiper Blades": "WB-2221",
+      "Oil Filter": "OF-5702",
+      "Engine Air Filter": "AF-8011",
+      "Cabin Air Filter": "CF-7308",
+      "Fuel Filter": "FF-1904"
+    }
+  },
+  {
+    "year": 2022,
+    "make": "Toyota",
+    "model": "Corolla",
+    "parts": {
+      "Wiper Blades": "WB-1839",
+      "Oil Filter": "OF-1030",
+      "Engine Air Filter": "AF-6174",
+      "Cabin Air Filter": "CF-6901",
+      "Fuel Filter": "FF-1508"
+    }
+  }
+]

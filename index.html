@@ -1,151 +1,77 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ontario Auto & Truck Supply (OAS) – OAS 2.1</title>
-  <meta name="description" content="Ontario Auto & Truck Supply — wiper blades, filters, 4x4 fluids and more. Serving all of Ontario.">
-  <link rel="icon" href="./assets/logo.png">
-  <link rel="stylesheet" href="./styles.css">
+  <title>Ontario Auto & Truck Supply</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <img src="./assets/logo.png" alt="Car logo">
-        <div class="brand-wide">Ontario Auto & Truck Supply</div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#ymm">YMM Lookup</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+
+<header>
+  <div class="container nav">
+    <img src="./assets/logo.png" alt="logo" class="logo" />
+    <div class="name">Ontario Auto & Truck Supply</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <h1>Find the right parts for your vehicle</h1>
+    <p>Wiper blades, filters, and service essentials.</p>
+    <a href="#find" id="jump" class="cta">Find My Parts</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Browse Categories</h2>
+    <div class="grid">
+      <div class="card">Wiper Blades</div>
+      <div class="card">Filters</div>
+      <div class="card">Service Fluids</div>
+      <div class="card">Air Delete Kits</div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main id="home">
-    <section class="hero">
-      <div class="container inner">
-        <h1>Ontario Auto & Truck Supply</h1>
-        <p>Wiper blades, filters, and 4×4 service fluids — built for busy shops and DIY drivers in Ontario.</p>
+<section id="find" class="section">
+  <div class="container">
+    <h2>Year • Make • Model</h2>
+    <div class="ymm">
+      <div class="row">
+        <select id="year" aria-label="Year"></select>
+        <select id="make" aria-label="Make"></select>
+        <select id="model" aria-label="Model"></select>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>Shop by Category</h2>
-        <div class="card-grid">
-          <div class="card">
-            <img src="./assets/cat-wipers.jpg" alt="Wiper blades">
-            <div class="p">
-              <span class="badge">Wiper Blades</span>
-              <p class="p">All-season and winter blades. Replace the image at <code>/assets/cat-wipers.jpg</code>.</p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./assets/cat-filters.jpg" alt="Filters">
-            <div class="p">
-              <span class="badge">Filters</span>
-              <p class="p">Oil, engine air, cabin, and fuel filters. Replace <code>/assets/cat-filters.jpg</code>.</p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./assets/cat-4x4-fluids.jpg" alt="4x4 Service Fluids">
-            <div class="p">
-              <span class="badge">4×4 Service Fluids</span>
-              <p class="p">Fluids for transfer cases, diffs, and more. Replace <code>/assets/cat-4x4-fluids.jpg</code>.</p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./assets/cat-airdelete.jpg" alt="Air Delete Kits">
-            <div class="p">
-              <span class="badge">Air Delete Kits</span>
-              <p class="p">Performance-focused parts. Replace <code>/assets/cat-airdelete.jpg</code>.</p>
-            </div>
-          </div>
-        </div>
-        <div class="notice">Swap these images later with your real photos (Pexels stock is fine). Keep the same filenames to avoid code changes.</div>
-      </div>
-    </section>
-
-    <section id="ymm" class="section">
-      <div class="container">
-        <h2>Year–Make–Model (YMM) Lookup</h2>
-        <div class="ymm">
-          <div class="row">
-            <select id="year" class="select"></select>
-            <select id="make" class="select"></select>
-            <select id="model" class="select"></select>
-            <select id="engine" class="select"></select>
-            <select id="category" class="select"></select>
-          </div>
-          <div style="margin-top:12px">
-            <button id="search">Search Parts</button>
-          </div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Year</th><th>Make</th><th>Model</th><th>Engine</th><th>Category</th><th>Part #</th><th>Notes</th>
-              </tr>
-            </thead>
-            <tbody id="results-body"></tbody>
-          </table>
-          <div class="notice">
-            Add or edit rows in <code>/data/ymm.csv</code> (Excel/Google Sheets → CSV). Columns: Year, Make, Model, Engine, Category, PartNumber, Notes.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About</h2>
-        <p>Ontario Auto & Truck Supply (OAS) is a local-first, online parts source. We focus on fast-moving items — wiper blades, filters, and service fluids — and we’re building out direct fitment by Year-Make-Model.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <form name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact">
-          <div class="row">
-            <input name="name" placeholder="Your name" required>
-            <input name="email" type="email" placeholder="your@email.com" required>
-          </div>
-          <div style="margin-top:12px">
-            <input name="subject" placeholder="Subject">
-          </div>
-          <div style="margin-top:12px">
-            <textarea name="message" placeholder="How can we help?" rows="5" class="select" style="resize:vertical"></textarea>
-          </div>
-          <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
-            <button type="submit">Send</button>
-            <small>or email us: <a href="mailto:ontarioautosupply@gmail.com">ontarioautosupply@gmail.com</a></small>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div>© <span id="y"></span> Ontario Auto & Truck Supply • Serving all of Ontario</div>
-      <div class="links">
-        <a href="./privacy.html">Privacy Policy</a>
-        <a href="./terms.html">Terms of Use</a>
-      </div>
-      <small>OAS 2.1 • Static site for Netlify drag-and-drop. No build step needed.</small>
+      <div id="results" class="results" aria-live="polite"></div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-  <script src="./app.js"></script>
+<section class="section">
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <div class="about">
+      <h2>About</h2>
+      <p>Ontario Auto & Truck Supply provides dependable replacement parts for cars and light trucks.</p>
+      <p>We focus on trusted brands, competitive pricing, and fast delivery — supporting drivers, shops, and service professionals across the province.</p>
+    </div>
+    <div class="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a class="email-link" href="mailto:ontarioautosupply@gmail.com">ontarioautosupply@gmail.com</a></p>
+      <p>For general inquiries or parts requests, please reach out by email and a representative will get back to you promptly.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © <span id="yearSpan"></span> Ontario Auto & Truck Supply
+  </div>
+</footer>
+
+<script>document.getElementById('yearSpan').textContent = new Date().getFullYear();</script>
+<script src="./js/ymm.js"></script>
+<script src="./js/script.js"></script>
 </body>
 </html>
