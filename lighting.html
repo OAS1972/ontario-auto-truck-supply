@@ -2,46 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>LED Headlights | Ontario Auto & Truck Supply</title>
+  <title>LED Lighting | Ontario Auto & Truck Supply</title>
   <link rel="stylesheet" href="./css/style.css">
+  <style>
+    body { background:#ffffff; }
+    .section h2 { color:#d80000; }
+    .card { 
+      background:#fff;
+      padding:20px;
+      border-radius:12px;
+      text-align:center;
+      box-shadow:0 4px 16px rgba(0,0,0,0.08);
+    }
+    .grid { 
+      display:grid; 
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); 
+      gap:20px; 
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container nav" style="background:#ffffff;border-bottom:1px solid #ddd;">
-    <a href="index.html" class="name" style="color:#e60000;font-size:22px;text-decoration:none;">
-      Ontario Auto & Truck Supply
-    </a>
+  <div class="container nav">
+    <img src="./assets/logo.png" alt="logo" class="logo" />
+    <div class="name">Ontario Auto & Truck Supply</div>
   </div>
 </header>
 
-<section style="background:#f7f7f7;padding:40px 0;text-align:center;">
-  <h1 style="color:#e60000;">LED Headlight Upgrades</h1>
-  <p style="color:#333;">Premium E-BRYD LED conversion kits.</p>
-</section>
+<section class="section">
+  <div class="container">
+    <h2>LED Kits</h2>
+    <p style="max-width:700px;margin:auto;text-align:center;color:#444;">
+      E-Bryd LED Kits – clean, bright upgrades for most vehicles.
+    </p>
 
-<section style="padding:40px 20px;background:#ffffff;">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;">
+    <div class="grid" style="margin-top:30px;">
 
-    <!-- E-Bryd Kit -->
-    <div style="background:#fff;padding:20px;border-radius:12px;box-shadow:0 0 10px rgba(0,0,0,0.12);text-align:center;">
-      <img src="assets/lighting/e-bryd.jpg" style="width:100%;height:180px;object-fit:cover;border-radius:8px;">
-      <h3 style="color:#e60000;margin-top:15px;">E-BRYD LED Headlight Kit</h3>
-      <p style="font-size:18px;font-weight:bold;">$145.99</p>
-      <button style="background:#e60000;color:#fff;padding:10px 20px;border:0;border-radius:8px;cursor:pointer;margin-top:10px;">
-        Buy Now
-      </button>
+      <div class="card">
+        <img src="assets/lighting/e-bryd.jpg" 
+             style="width:100%;height:180px;object-fit:contain;border-radius:10px;">
+        <div style="font-weight:700;margin-top:10px;">E-Bryd LED Kit</div>
+        <div style="color:#666;font-size:14px;">Plug-and-Play Upgrade</div>
+        <div style="margin-top:8px;font-weight:700;color:#d80000;">$145.99</div>
+      </div>
+
     </div>
 
   </div>
 </section>
 
-<footer style="background:#f7f7f7;padding:20px;text-align:center;">
-  © <span id="yearSpan"></span> Ontario Auto & Truck Supply
+<footer>
+  <div class="container">
+    © <span id="yearSpan"></span> Ontario Auto & Truck Supply
+  </div>
 </footer>
 
-<script>document.getElementById('yearSpan').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('yearSpan').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
