@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OEM Part Search – $5 | Ontario Auto & Truck Supply</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container nav" style="background:#ffffff;border-bottom:1px solid #ddd;">
+    <a href="index.html" class="name" style="color:#e60000;font-size:22px;text-decoration:none;">
+      Ontario Auto & Truck Supply
+    </a>
+  </div>
+</header>
+
+<section style="background:#f7f7f7;padding:40px 0;text-align:center;">
+  <h1 style="color:#e60000;">OEM Part Number Finder – $5</h1>
+  <p style="color:#333;font-size:18px;">We can search the dealer network across Canada.</p>
+</section>
+
+<section style="padding:40px 20px;background:#ffffff;text-align:center;">
+
+  <form action="mailto:ontarioautosupply@gmail.com" 
+        method="post" 
+        enctype="text/plain" 
+        style="max-width:500px;margin:auto;text-align:left;">
+
+    <label>Your Name</label><br>
+    <input type="text" name="name" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;"><br>
+
+    <label>Email</label><br>
+    <input type="email" name="email" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;"><br>
+
+    <label>Vehicle (Year / Make / Model)</label><br>
+    <input type="text" name="vehicle" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;"><br>
+
+    <label>VIN Number (17 Characters)</label><br>
+    <input type="text" name="vin" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;"><br>
+
+    <label>Part Number (if available)</label><br>
+    <input type="text" name="part_number" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;"><br>
+
+    <label>Describe the Part</label><br>
+    <textarea name="part_details" style="width:100%;padding:10px;margin:10px 0;height:120px;border-radius:8px;border:1px solid #ccc;"></textarea><br>
+
+    <input type="submit" value="Submit Request – $5"
+           style="background:#e60000;color:#fff;border:0;padding:12px 24px;border-radius:8px;cursor:pointer;font-size:16px;">
+  </form>
+
+  <p style="margin-top:20px;font-size:14px;color:#555;">
+    <strong>Disclaimer:</strong> If the part request is related to warranty or a recall, the work must be completed through a local dealership.
+  </p>
+
+</section>
+
+<footer style="background:#f7f7f7;padding:20px;text-align:center;">
+  © <span id="yearSpan"></span> Ontario Auto & Truck Supply
+</footer>
+
+<script>
+document.getElementById('yearSpan').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

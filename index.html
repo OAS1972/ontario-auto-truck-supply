@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -6,38 +6,30 @@
   <title>Ontario Auto & Truck Supply</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+
+<body style="background:#ffffff;">
 
 <header>
-  <div class="container nav">
+  <div class="container nav" style="background:#ffffff;border-bottom:1px solid #ddd;">
     <img src="./assets/logo.png" alt="logo" class="logo" />
-    <div class="name">Ontario Auto & Truck Supply</div>
+    <div class="name" style="color:#e60000;">Ontario Auto & Truck Supply</div>
   </div>
 </header>
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero" style="background:#ffffff;color:#000;padding:40px 0;">
   <div class="container hero-inner">
-    <h1>Find the right parts for your vehicle</h1>
-    <p>Wiper blades, filters, and service essentials.</p>
+    <h1 style="color:#e60000;">Find the Right Parts Fast</h1>
+    <p style="color:#444;">LED lighting, headlight & taillight assemblies, and OEM part lookup.</p>
     <a href="#find" id="jump" class="cta">Find My Parts</a>
   </div>
 </section>
 
-<section class="section">
+<!-- YMM SELECTOR -->
+<section id="find" class="section" style="background:#ffffff;padding-top:20px;">
   <div class="container">
-    <h2>Browse Categories</h2>
-    <div class="grid">
-      <div class="card">Wiper Blades</div>
-      <div class="card">Filters</div>
-      <div class="card">Service Fluids</div>
-      <div class="card">Air Delete Kits</div>
-    </div>
-  </div>
-</section>
+    <h2 style="color:#e60000;">Year • Make • Model</h2>
 
-<section id="find" class="section">
-  <div class="container">
-    <h2>Year • Make • Model</h2>
     <div class="ymm">
       <div class="row">
         <select id="year" aria-label="Year"></select>
@@ -49,29 +41,87 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-    <div class="about">
-      <h2>About</h2>
-      <p>Ontario Auto & Truck Supply provides dependable replacement parts for cars and light trucks.</p>
-      <p>We focus on trusted brands, competitive pricing, and fast delivery — supporting drivers, shops, and service professionals across the province.</p>
-    </div>
-    <div class="contact">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a class="email-link" href="mailto:ontarioautosupply@gmail.com">ontarioautosupply@gmail.com</a></p>
-      <p>For general inquiries or parts requests, please reach out by email and a representative will get back to you promptly.</p>
+<!-- CATEGORIES -->
+<section class="section" style="background:#ffffff;padding-top:10px;">
+  <div class="container">
+    <h2 style="color:#e60000;">Browse Categories</h2>
+
+    <div class="grid" style="background:#ffffff;">
+
+      <!-- LED LIGHTING -->
+      <div class="card" style="background:#ffffff;border:1px solid #eee;">
+        <a href="lighting.html" style="text-decoration:none;color:inherit;">
+          <img src="assets/lighting/e-bryd.jpg"
+               alt="LED Lighting - OAS"
+               style="width:100%;height:150px;object-fit:contain;border-radius:8px;">
+          <div style="padding-top:8px;font-weight:700;">LED Lighting</div>
+          <div style="font-size:14px;color:#555;">E-Bryd Kits</div>
+        </a>
+      </div>
+
+      <!-- HEADLIGHT ASSEMBLIES -->
+      <div class="card" style="background:#ffffff;border:1px solid #eee;">
+        <a href="headlight-assemblies.html" style="text-decoration:none;color:inherit;">
+          <img src="assets/headlights-sample.jpg"
+               alt="Headlight Assemblies - OAS"
+               style="width:100%;height:150px;object-fit:contain;border-radius:8px;">
+          <div style="padding-top:8px;font-weight:700;">Headlight Assemblies</div>
+          <div style="font-size:14px;color:#555;">Morimoto</div>
+        </a>
+      </div>
+
+      <!-- TAILLIGHT ASSEMBLIES -->
+      <div class="card" style="background:#ffffff;border:1px solid #eee;">
+        <a href="taillight-assemblies.html" style="text-decoration:none;color:inherit;">
+          <img src="assets/taillights-sample.jpg"
+               alt="Taillight Assemblies - OAS"
+               style="width:100%;height:150px;object-fit:contain;border-radius:8px;">
+          <div style="padding-top:8px;font-weight:700;">Taillight Assemblies</div>
+          <div style="font-size:14px;color:#555;">Morimoto</div>
+        </a>
+      </div>
+
+      <!-- OEM PART SEARCH -->
+      <div class="card" style="background:#ffffff;border:1px solid #eee;">
+        <a href="oem-search.html" style="text-decoration:none;color:inherit;">
+          <img src="assets/oem-search.png"
+               alt="OEM Part Number Search - OAS"
+               style="width:100%;height:150px;object-fit:contain;border-radius:8px;">
+          <div style="padding-top:8px;font-weight:700;">OEM Part Number Search</div>
+          <div style="font-size:14px;color:#555;">We search dealer networks</div>
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="container">
-    © <span id="yearSpan"></span> Ontario Auto & Truck Supply
+<!-- ABOUT / CONTACT -->
+<section class="section" style="background:#ffffff;">
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div>
+      <h2 style="color:#e60000;">About</h2>
+      <p>Ontario Auto & Truck Supply provides reliable aftermarket and OEM lighting solutions across Canada.</p>
+      <p>We focus on trusted brands, competitive pricing, and fast response times.</p>
+    </div>
+    <div>
+      <h2 style="color:#e60000;">Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:ontarioautosupply@gmail.com">ontarioautosupply@gmail.com</a></p>
+      <p>For custom quotes or part requests, reach out anytime.</p>
+    </div>
   </div>
+</section>
+
+<footer style="background:#f7f7f7;padding:20px;text-align:center;">
+  © <span id="yearSpan"></span> Ontario Auto & Truck Supply
 </footer>
 
-<script>document.getElementById('yearSpan').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('yearSpan').textContent = new Date().getFullYear();
+</script>
+
 <script src="./js/ymm.js"></script>
 <script src="./js/script.js"></script>
+
 </body>
 </html>
