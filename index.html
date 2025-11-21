@@ -5,90 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ontario Auto & Truck Supply</title>
   <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .hero {
+      background: #fafafa;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .hero h1 {
+      color: #d80000;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #555;
+    }
+    .section h2 {
+      color: #d80000;
+      margin-bottom: 20px;
+    }
+    .oem-box {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      max-width: 700px;
+      margin: auto;
+    }
+    .oem-box input, .oem-box textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .oem-btn {
+      background: #d80000;
+      color: white;
+      padding: 14px;
+      width: 100%;
+      border-radius: 10px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    }
+  </style>
 </head>
 
-<body style="background:#ffffff;">
+<body>
 
 <header>
-  <div class="container nav" style="background:#ffffff;border-bottom:1px solid #ddd;">
+  <div class="container nav">
     <img src="./assets/logo.png" alt="logo" class="logo" />
-    <div class="name" style="color:#e60000;">Ontario Auto & Truck Supply</div>
+    <div class="name">Ontario Auto & Truck Supply</div>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero" style="background:#ffffff;color:#000;padding:40px 0;">
-  <div class="container hero-inner">
-    <h1 style="color:#e60000;">Find the Right Parts Fast</h1>
-    <p style="color:#444;">LED lighting, headlight & taillight assemblies, and OEM part lookup.</p>
-    <a href="#find" id="jump" class="cta">Find My Parts</a>
-  </div>
-</section>
-
-<!-- YMM SELECTOR -->
-<section id="find" class="section" style="background:#ffffff;padding-top:20px;">
+<section class="hero">
   <div class="container">
-    <h2 style="color:#e60000;">Year • Make • Model</h2>
-
-    <div class="ymm">
-      <div class="row">
-        <select id="year" aria-label="Year"></select>
-        <select id="make" aria-label="Make"></select>
-        <select id="model" aria-label="Model"></select>
-      </div>
-      <div id="results" class="results" aria-live="polite"></div>
-    </div>
+    <h1>Fast, Reliable Auto Parts Search</h1>
+    <p>Headlights • Taillights • LED Kits • OEM Dealer Network Search</p>
   </div>
 </section>
 
 <!-- CATEGORIES -->
-<section class="section" style="background:#ffffff;padding-top:10px;">
+<section class="section">
   <div class="container">
-    <h2 style="color:#e60000;">Browse Categories</h2>
+    <h2>Browse Categories</h2>
+    <div class="grid">
 
-    <div class="grid" style="background:#ffffff;">
-
-      <!-- LED LIGHTING -->
-      <div class="card" style="background:#ffffff;border:1px solid #eee;">
+      <!-- LED Kits -->
+      <div class="card">
         <a href="lighting.html" style="text-decoration:none;color:inherit;">
           <img src="assets/lighting/e-bryd.jpg"
-               alt="LED Lighting - OAS"
                style="width:100%;height:150px;object-fit:contain;border-radius:8px;">
-          <div style="padding-top:8px;font-weight:700;">LED Lighting</div>
-          <div style="font-size:14px;color:#555;">E-Bryd Kits</div>
+          <div style="font-weight:700;margin-top:8px;">E-Bryd Kits</div>
         </a>
       </div>
 
-      <!-- HEADLIGHT ASSEMBLIES -->
-      <div class="card" style="background:#ffffff;border:1px solid #eee;">
+      <!-- Headlight Assemblies -->
+      <div class="card">
         <a href="headlight-assemblies.html" style="text-decoration:none;color:inherit;">
-          <img src="assets/headlights-sample.jpg"
-               alt="Headlight Assemblies - OAS"
-               style="width:100%;height:150px;object-fit:contain;border-radius:8px;">
-          <div style="padding-top:8px;font-weight:700;">Headlight Assemblies</div>
-          <div style="font-size:14px;color:#555;">Morimoto</div>
+          <img src="assets/headlight-sample.png"
+               style="width:100%;height:150px;object-fit:cover;border-radius:8px;">
+          <div style="font-weight:700;margin-top:8px;">Headlight Assemblies</div>
         </a>
       </div>
 
-      <!-- TAILLIGHT ASSEMBLIES -->
-      <div class="card" style="background:#ffffff;border:1px solid #eee;">
+      <!-- Taillight Assemblies -->
+      <div class="card">
         <a href="taillight-assemblies.html" style="text-decoration:none;color:inherit;">
-          <img src="assets/taillights-sample.jpg"
-               alt="Taillight Assemblies - OAS"
-               style="width:100%;height:150px;object-fit:contain;border-radius:8px;">
-          <div style="padding-top:8px;font-weight:700;">Taillight Assemblies</div>
-          <div style="font-size:14px;color:#555;">Morimoto</div>
+          <img src="assets/taillights-sample.png"
+               style="width:100%;height:150px;object-fit:cover;border-radius:8px;">
+          <div style="font-weight:700;margin-top:8px;">Taillight Assemblies</div>
         </a>
       </div>
 
       <!-- OEM PART SEARCH -->
-      <div class="card" style="background:#ffffff;border:1px solid #eee;">
-        <a href="oem-search.html" style="text-decoration:none;color:inherit;">
+      <div class="card">
+        <a href="OEM-search.html" style="text-decoration:none;color:inherit;">
           <img src="assets/oem-search.png"
-               alt="OEM Part Number Search - OAS"
                style="width:100%;height:150px;object-fit:contain;border-radius:8px;">
-          <div style="padding-top:8px;font-weight:700;">OEM Part Number Search</div>
-          <div style="font-size:14px;color:#555;">We search dealer networks</div>
+          <div style="font-weight:700;margin-top:8px;">OEM Part Number Search</div>
+          <div style="font-size:14px;color:#555;">We search dealer networks across Canada</div>
         </a>
       </div>
 
@@ -96,32 +129,57 @@
   </div>
 </section>
 
-<!-- ABOUT / CONTACT -->
-<section class="section" style="background:#ffffff;">
-  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-    <div>
-      <h2 style="color:#e60000;">About</h2>
-      <p>Ontario Auto & Truck Supply provides reliable aftermarket and OEM lighting solutions across Canada.</p>
-      <p>We focus on trusted brands, competitive pricing, and fast response times.</p>
+<!-- OEM MAIN FEATURE -->
+<section class="section">
+  <div class="container">
+    <h2>OEM Part Number Search</h2>
+    <p style="max-width:700px;margin:auto;font-size:16px;color:#444;text-align:center;">
+      Provide your VIN and the part number (if you have it), and we’ll search the Canadian dealer network.
+      <br><strong>Note:</strong> Warranty or recall parts must be handled by your local dealership.
+    </p>
+
+    <div class="oem-box" style="margin-top:20px;">
+      <input type="text" placeholder="Full Name">
+      <input type="text" placeholder="Email Address">
+      <input type="text" placeholder="VIN Number (17 characters)">
+      <input type="text" placeholder="OEM Part Number (optional)">
+      <textarea rows="4" placeholder="Describe what you need..."></textarea>
+      <button class="oem-btn">Submit OEM Search Request – $5</button>
     </div>
-    <div>
-      <h2 style="color:#e60000;">Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:ontarioautosupply@gmail.com">ontarioautosupply@gmail.com</a></p>
-      <p>For custom quotes or part requests, reach out anytime.</p>
-    </div>
+
   </div>
 </section>
 
-<footer style="background:#f7f7f7;padding:20px;text-align:center;">
-  © <span id="yearSpan"></span> Ontario Auto & Truck Supply
+<!-- ABOUT & CONTACT -->
+<section class="section">
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
+
+    <div>
+      <h2>About</h2>
+      <p>Ontario Auto & Truck Supply provides reliable replacement parts for cars and trucks across Ontario.</p>
+      <p>We focus on trusted brands, fair pricing, and fast delivery.</p>
+    </div>
+
+    <div>
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:ontarioautosupply@gmail.com">
+        ontarioautosupply@gmail.com
+      </a></p>
+      <p>Send us a message anytime for product availability or OEM part lookups.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © <span id="yearSpan"></span> Ontario Auto & Truck Supply
+  </div>
 </footer>
 
 <script>
-document.getElementById('yearSpan').textContent = new Date().getFullYear();
+  document.getElementById('yearSpan').textContent = new Date().getFullYear();
 </script>
-
-<script src="./js/ymm.js"></script>
-<script src="./js/script.js"></script>
 
 </body>
 </html>
