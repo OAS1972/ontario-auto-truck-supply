@@ -19,26 +19,56 @@
       padding:20px;
     }
 
+    /* HOME BUTTON */
+    .home-link {
+      display:inline-block;
+      margin-bottom:20px;
+      padding:8px 16px;
+      background:#d80000;
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+    }
+
     h1 {
       text-align:center;
       color:#d80000;
-      font-size:28px;
+      font-size:32px;
       margin-bottom:10px;
     }
 
-    .price-note {
+    /* PRICE DISPLAY */
+    .reg-price {
       text-align:center;
       font-size:16px;
-      margin-bottom:5px;
-      color:#333;
+      color:#777;
+      text-decoration:line-through;
+      margin-bottom:3px;
+    }
+
+    .sale-price {
+      text-align:center;
+      font-size:22px;
+      color:#d80000;
       font-weight:bold;
+      margin-bottom:8px;
     }
 
     .shipping-note {
       text-align:center;
       font-size:14px;
-      margin-bottom:25px;
+      margin-bottom:30px;
       color:#555;
+    }
+
+    /* FORCE BLACK TEXT for table */
+    table.sku-table th,
+    table.sku-table td,
+    table.sku-table tr,
+    table.sku-table {
+      color:#000 !important;
+      font-weight:600;
     }
 
     .sku-table-wrapper {
@@ -48,35 +78,30 @@
     table.sku-table {
       width:100%;
       border-collapse:collapse;
-      font-size:14px;
+      font-size:15px;
     }
 
     table.sku-table th,
     table.sku-table td {
       border:1px solid #ddd;
-      padding:10px;
+      padding:12px;
       text-align:left;
-      vertical-align:middle;
+      background:#fff;
     }
 
     table.sku-table th {
-      background:#f5f5f5;
-      font-weight:bold;
-    }
-
-    table.sku-table tr:nth-child(even) {
-      background:#fafafa;
+      background:#f0f0f0 !important;
     }
 
     .buy-btn {
       display:inline-block;
-      padding:8px 16px;
+      padding:8px 18px;
       background:#d80000;
-      color:#fff;
+      color:#fff !important;
       text-decoration:none;
       font-size:14px;
       font-weight:bold;
-      border-radius:8px;
+      border-radius:6px;
       text-align:center;
     }
 
@@ -86,7 +111,7 @@
 
     .footer {
       text-align:center;
-      margin-top:30px;
+      margin-top:40px;
       font-size:14px;
       color:#555;
     }
@@ -97,11 +122,15 @@
 
 <div class="container">
 
+  <!-- HOME BUTTON -->
+  <a class="home-link" href="index.html">← Home</a>
+
   <h1>E-Bryd LED Headlight Conversion Kits</h1>
 
-  <div class="price-note">
-    All kits: $149.99 — Shipping Included
-  </div>
+  <!-- PRICING -->
+  <div class="reg-price">Regular Price: $199.00</div>
+  <div class="sale-price">Sale Price: $165.00</div>
+
   <div class="shipping-note">
     Delivery: 3–10 Business Days (Ontario). Free shipping Ontario-wide.
   </div>
@@ -111,13 +140,13 @@
       <thead>
         <tr>
           <th>Bulb Type</th>
-          <th>SKU (OAS / Dix E-Bryd)</th>
+          <th>SKU</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
 
-        <!-- H-Series -->
+        <!-- H-Series SKUs -->
         <tr><td>H1</td><td>LEDEBRYD-H1</td><td><a class="buy-btn" href="https://square.link/u/yCladwjM" target="_blank">Buy Now</a></td></tr>
         <tr><td>H3</td><td>LEDEBRYD-H3</td><td><a class="buy-btn" href="https://square.link/u/yCladwjM" target="_blank">Buy Now</a></td></tr>
         <tr><td>H4</td><td>LEDEBRYD-H4</td><td><a class="buy-btn" href="https://square.link/u/yCladwjM" target="_blank">Buy Now</a></td></tr>
@@ -128,14 +157,14 @@
         <tr><td>H11</td><td>LEDEBRYD-H11</td><td><a class="buy-btn" href="https://square.link/u/yCladwjM" target="_blank">Buy Now</a></td></tr>
         <tr><td>H13</td><td>LEDEBRYD-H13</td><td><a class="buy-btn" href="https://square.link/u/yCladwjM" target="_blank">Buy Now</a></td></tr>
 
-        <!-- 9000-Series -->
+        <!-- 9000-Series SKUs -->
         <tr><td>9004</td><td>LEDEBRYD-9004</td><td><a class="buy-btn" href="https://square.link/u/yCladwjM" target="_blank">Buy Now</a></td></tr>
         <tr><td>9005</td><td>LEDEBRYD-9005</td><td><a class="buy-btn" href="https://square.link/u/yCladwjM" target="_blank">Buy Now</a></td></tr>
         <tr><td>9006</td><td>LEDEBRYD-9006</td><td><a class="buy-btn" href="https://square.link/u/yCladwjM" target="_blank">Buy Now</a></td></tr>
         <tr><td>9007</td><td>LEDEBRYD-9007</td><td><a class="buy-btn" href="https://square.link/u/yCladwjM" target="_blank">Buy Now</a></td></tr>
         <tr><td>9012</td><td>LEDEBRYD-9012</td><td><a class="buy-btn" href="https://square.link/u/yCladwjM" target="_blank">Buy Now</a></td></tr>
 
-        <!-- 880 -->
+        <!-- 880 SKU -->
         <tr><td>880</td><td>LEDEBRYD-880</td><td><a class="buy-btn" href="https://square.link/u/yCladwjM" target="_blank">Buy Now</a></td></tr>
 
       </tbody>
