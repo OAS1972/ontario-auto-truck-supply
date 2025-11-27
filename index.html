@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ontario Auto & Truck Supply</title>
   <link rel="stylesheet" href="./css/style.css">
+
   <style>
     .hero {
       background: #fafafa;
@@ -67,6 +68,15 @@
 
 <body>
 
+<!-- Navigation Bar -->
+<nav style="background:#ffffff; padding:20px; text-align:center; border-bottom:2px solid #d80000;">
+  <a href="index.html" style="color:#000; margin:0 20px; text-decoration:none; font-weight:bold;">Home</a>
+  <a href="lighting.html" style="color:#000; margin:0 20px; text-decoration:none; font-weight:bold;">LED Lighting</a>
+  <a href="OEM-search.html" style="color:#000; margin:0 20px; text-decoration:none; font-weight:bold;">OEM Lookup</a>
+  <a href="about.html" style="color:#000; margin:0 20px; text-decoration:none; font-weight:bold;">About</a>
+  <a href="contact.html" style="color:#000; margin:0 20px; text-decoration:none; font-weight:bold;">Contact</a>
+</nav>
+
 <header>
   <div class="container nav">
     <img src="./assets/logo.png" alt="logo" class="logo" />
@@ -82,6 +92,7 @@
   </div>
 </section>
 
+
 <!-- CATEGORIES -->
 <section class="section">
   <div class="container">
@@ -89,26 +100,24 @@
     <div class="grid">
 
       <!-- LED Kits -->
-<div class="card">
-  <a href="lighting.html" style="text-decoration:none;color:inherit;">
-    <img src="assets/lighting/e-bryd.jpg"
-         style="width:100%;height:150px;object-fit:contain;border-radius:8px;">
-    
-    <div style="font-weight:700;margin-top:8px;">E-Bryd Kits</div>
+      <div class="card">
+        <a href="lighting.html" style="text-decoration:none;color:inherit;">
+          <img src="assets/lighting/e-bryd.jpg"
+               style="width:100%;height:150px;object-fit:contain;border-radius:8px;">
+          
+          <div style="font-weight:700;margin-top:8px;">E-Bryd Kits</div>
 
-    <!-- PRICE DISPLAY -->
-    <div style="text-align:center;margin-top:6px;">
-      <span style="color:#777;font-size:14px;text-decoration:line-through;">
-        Reg: $199.00
-      </span>
-      <br>
-      <span style="color:#d80000;font-size:18px;font-weight:bold;">
-        Sale: $165.00
-      </span>
-    </div>
-  </a>
-</div>
-
+          <div style="text-align:center;margin-top:6px;">
+            <span style="color:#777;font-size:14px;text-decoration:line-through;">
+              Reg: $199.00
+            </span>
+            <br>
+            <span style="color:#d80000;font-size:18px;font-weight:bold;">
+              Sale: $165.00
+            </span>
+          </div>
+        </a>
+      </div>
 
       <!-- Headlight Assemblies -->
       <div class="card">
@@ -142,47 +151,36 @@
   </div>
 </section>
 
-<!-- OEM MAIN FEATURE -->
+
+<!-- OEM MAIN FEATURE (FIXED + WORKING FORM) -->
 <section class="section">
   <div class="container">
     <h2>OEM Part Number Search</h2>
+
     <p style="max-width:700px;margin:auto;font-size:16px;color:#444;text-align:center;">
       Provide your VIN and the part number (if you have it), and we’ll search the Canadian dealer network.
       <br><strong>Note:</strong> Warranty or recall parts must be handled by your local dealership.
     </p>
 
     <div class="oem-box" style="margin-top:20px;">
-      <input type="text" placeholder="Full Name">
-      <input type="text" placeholder="Email Address">
-      <input type="text" placeholder="VIN Number (17 characters)">
-      <input type="text" placeholder="OEM Part Number (optional)">
-      <textarea rows="4" placeholder="Describe what you need..."></textarea>
-      <button class="oem-btn">Submit OEM Search Request – $5</button>
+      <form action="mailto:ontarioautosupply@gmail.com" method="post" enctype="text/plain">
+
+        <input type="text" name="Full Name" placeholder="Full Name">
+        <input type="text" name="Email" placeholder="Email Address">
+        <input type="text" name="VIN" placeholder="VIN Number (17 characters)">
+        <input type="text" name="OEM Part Number" placeholder="OEM Part Number (optional)">
+        <textarea rows="4" name="Details" placeholder="Describe what you need..."></textarea>
+
+        <button type="submit" class="oem-btn">
+          Submit OEM Search Request – $5
+        </button>
+
+      </form>
     </div>
 
   </div>
 </section>
 
-<!-- ABOUT & CONTACT -->
-<section class="section">
-  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
-
-    <div>
-      <h2>About</h2>
-      <p>Ontario Auto & Truck Supply provides reliable replacement parts for cars and trucks across Ontario.</p>
-      <p>We focus on trusted brands, fair pricing, and fast delivery.</p>
-    </div>
-
-    <div>
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:ontarioautosupply@gmail.com">
-        ontarioautosupply@gmail.com
-      </a></p>
-      <p>Send us a message anytime for product availability or OEM part lookups.</p>
-    </div>
-
-  </div>
-</section>
 
 <footer>
   <div class="container">
