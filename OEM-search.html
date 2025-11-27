@@ -32,6 +32,22 @@
       width:100%;
       font-size:18px;
       cursor:pointer;
+      text-decoration:none;
+      display:block;
+      text-align:center;
+    }
+    .btn-black {
+      background:#000;
+      color:#fff;
+      border:0;
+      padding:14px;
+      border-radius:10px;
+      width:100%;
+      font-size:18px;
+      cursor:pointer;
+      text-decoration:none;
+      display:block;
+      text-align:center;
     }
   </style>
 </head>
@@ -46,12 +62,14 @@
 </header>
 
 <!-- HOME BUTTON -->
-<a href="index.html" style="display:inline-block;margin:20px 0 0 20px;padding:8px 16px;background:#d80000;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold;">
+<a href="index.html"
+   style="display:inline-block;margin:20px 0 0 20px;padding:8px 16px;background:#d80000;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold;">
   ← Home
 </a>
 
 <section class="section">
   <div class="container" style="text-align:center;">
+
     <h2>OEM Part Number Search</h2>
 
     <!-- CONTACT LINE -->
@@ -61,21 +79,30 @@
 
     <p style="max-width:700px;margin:20px auto;font-size:16px;color:#444;">
       Provide your VIN and a description of the part.  
-      We search the Canadian dealer network for availability.
+      We search the Canadian dealer network for the correct OEM part number.
       <br><strong>Note:</strong> Warranty or recall parts must be handled by your local dealership.
     </p>
 
     <div class="oem-box" style="margin-top:20px;">
-      <input type="text" placeholder="Full Name">
-      <input type="text" placeholder="Email Address">
-      <input type="text" placeholder="VIN Number (17 characters)">
-      <input type="text" placeholder="OEM Part Number (optional)">
-      <textarea placeholder="Describe what you need..." rows="4"></textarea>
 
-      <!-- REPLACE BUTTON WITH SQUARE CHECKOUT LINK -->
-      <a href="https://square.link/u/JIivju6a" target="_blank" class="btn" style="display:block;text-align:center;text-decoration:none;">
+      <input id="oemName" type="text" placeholder="Full Name">
+      <input id="oemEmail" type="text" placeholder="Email Address">
+      <input id="oemVIN" type="text" placeholder="VIN Number (17 characters)">
+      <input id="oemPart" type="text" placeholder="OEM Part Number (optional)">
+      <textarea id="oemDesc" placeholder="Describe what you need..." rows="4"></textarea>
+
+      <!-- PAY FIRST BUTTON -->
+      <a href="https://square.link/u/JIivju6a" target="_blank"
+         class="btn"
+         style="margin-bottom:15px;">
         Pay $5 OEM Search Fee
       </a>
+
+      <!-- SEND EMAIL BUTTON -->
+      <button class="btn-black" onclick="sendOEMEmail()">
+        Send OEM Request
+      </button>
+
     </div>
 
   </div>
@@ -89,6 +116,28 @@
 
 <script>
 document.getElementById('yearSpan').textContent = new Date().getFullYear();
+
+function sendOEMEmail() {
+
+    var name = document.getElementById("oemName").value || "";
+    var email = document.getElementById("oemEmail").value || "";
+    var vin = document.getElementById("oemVIN").value || "";
+    var part = document.getElementById("oemPart").value || "";
+    var desc = document.getElementById("oemDesc").value || "";
+
+    var encodedBody = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "VIN: " + vin + "\n" +
+        "Part Number: " + part + "\n" +
+        "Description: " + desc
+    );
+
+    window.location.href =
+        "mailto:ontarioautosupply@gmail.com"
+        + "?subject=OEM Part Number Request"
+        + "&body=" + encodedBody;
+}
 </script>
 
 </body>
